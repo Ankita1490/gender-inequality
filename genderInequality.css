@@ -1,0 +1,258 @@
+/*CSS Variables */
+:root{
+    --primary : #f9f9f9;
+    --dark :#333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104,104,104,0.8);
+  
+    --darkPink: rgb(206,0,88);
+    --lightPink: rgb(228,177,195);
+    --darkGreen: rgb(0,164,153);
+    --lightGreen: rgb(182,215,211);
+    --darkOrange: rgb(220,68,5);
+    --lightOrange: rgb(233,189,155);
+    --darkBlue: rgb(0, 119, 200);
+    --lightBlue: rgb(172, 199, 233);
+    --darkPuple: rgb(132,50,155);
+    --lightPurple: rgb(188,170,208);
+    --yellow: rgb(254, 221, 0);
+    --grey: rgb(215, 210, 203);
+    --black: rgb(45, 41, 38);
+    --white: rgb(255,255,255);
+    --font-family: "Open Sans";
+  }
+
+  body {
+    background: var(--white);
+    color: var(--black);
+    font-family: var(--font-family);
+    font-size: 1.2rem;
+    line-height: 1.45;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  /*Main-content*/
+
+.main-content {
+    flex: 1 1 80%;
+    min-height: 100vh;
+  
+  }
+
+.gender-inequality{
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(4,1fr); 
+    grid-template-columns: repeat(10,1fr);
+    grid-gap: 3px 1px;
+   }
+
+   .gender-inequality-item{
+    background: var(--primary);
+    color: var(--black);
+    font-family: var(--font-family);
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gender-inequality-item.lable1{
+  background-color: var(--primary);
+  grid-row: 4 ;
+  grid-column: 1/span 5;
+  justify-content:center;
+  text-align: center;
+  padding-bottom: 270px;
+  background-color: white;
+}
+.gender-inequality-item.lable2 {
+  background-color: var(--primary);
+  grid-row: 4 ;
+  grid-column: 6/span 5;
+  justify-content:center;
+  padding-bottom: 270px;
+  background-color: white;
+}
+.gender-inequality-item.map{
+    background-color: var(--primary);
+    grid-row: 1 /span 2;
+    grid-column: 1/span 7;
+}
+.gender-inequality-item.dropdown{
+    background-color: var(--primary);
+    grid-row: 1;
+    grid-column: 8/span 3;
+}
+
+.gender-inequality-item.brushing{
+    background-color: var(--primary);
+    grid-row: 3 ;
+    grid-column: 7/span 4;
+}
+
+.gender-inequality-item.continent{
+  justify-content: left;
+  align-items: left;
+    background-color: var(--primary);
+    grid-row: 2;
+    grid-column: 8/span 3;
+}
+
+.gender-inequality-item.linechart{
+    background-color: var(--primary);
+    grid-row: 3 ;
+    grid-column: 1/span 5;
+    grid-template-columns: 1fr 1fr;
+}
+.example{
+  grid-column : 1/5;
+  grid-row:1;
+}
+.example1{
+  grid-column : 1/5;
+  grid-row:2;
+}
+.gender-inequality-item.sunbrust{
+    background-color: var(--primary);
+    grid-row: 3;
+    grid-column: 6/span 5;
+}
+
+/*Maps.css*/
+.selected {
+  fill:rgb(0,164,153)
+}
+
+.area {
+  fill: white;
+  stroke: black;
+  stroke-width: 1px; 
+}
+
+.hidden {
+  display: none;
+}
+
+div.tooltip {
+  color: #222; 
+  background: #fff; 
+  border-radius: 3px; 
+  box-shadow: 0px 0px 2px 0px #a6a6a6; 
+  padding: .2em; 
+  text-shadow: #f5f5f5 0 1px 0;
+  opacity: 0.9; 
+  position: absolute;
+}
+
+.label {
+  font: 10px sans-serif;
+  font-weight: bold;
+}
+
+.city {
+  font: 10px sans-serif;
+  font-weight: bold;
+  color:rgb(0,164,153)
+}
+
+
+/*to show average*/
+.phase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  grid-area: phase;
+  background-color: rgb(0,164,153);
+  color: white;
+  font-weight: 2vw;
+}
+.phase-view-margin {
+  grid-area: margin;
+}
+.phase-bar {
+  grid-area: line;
+  background-color: rgb(254, 150, 102);
+}
+.phase-detail{
+  padding: 1vw;
+}
+.phase-view {
+  display: grid;
+  grid-template-areas: 'stage';
+  grid-template-columns:  1fr;
+  grid-template-rows: 10em;
+  text-align: center;
+}
+
+.average-view {
+  display: grid;
+  grid-template-areas: 'phase margin stage ';
+  grid-template-columns:  10em 1em 15em 1fr;
+  grid-template-rows: 10em;
+  text-align: center;
+}
+#phase {
+  font-size: 2.5vw;
+}
+.stage-inner {
+  display: grid;
+  grid-template-areas: 'average-name'
+                      'stage-subinfo';
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+}
+.average-name{
+  padding-top: 50px;
+
+
+}
+.stage-subinfo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 1vw;
+  align-items: center;
+  margin-top: -2vw;
+}
+
+.stage-subinfo>div>div {
+  text-align: center;
+}
+
+.stage-subinfo>div>div>span {
+  color: rgb(0,164,153);
+  font-size: 2vw;
+  font-weight: normal;  
+  align-items: center;
+}
+#average{
+  font-size: 2vw;
+  font-weight: bold;
+}
+.average{
+  font-size: 0.9vw;
+  font-weight: bold;
+}
+#stage {
+  font-size: 2vw;
+}
+.stage-label {
+  font-size: 0.8vw !important;
+  color: #999999 !important;
+  font-weight: bold !important;
+   padding-right: 0.5vw;
+  
+}
+
+.stage {
+  justify-content: center;
+  text-align: left;
+  grid-area: stage;
+  padding: 10px;
+  font-size: 1vw;
+  font-weight: bold;
+  color: #777777;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="genderInequality.css">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+<style>
+.line {
+  stroke-width: 2;
+  fill: none;
+}
+
+.axis path {
+  stroke: black;
+}
+
+.text {
+  font-size: 12px;
+}
+
+.title-text {
+  font-size: 12px;
+}
+</style>
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+
+</head>
+<body>
+    <div class="main-content">
+            <div class="gender-inequality">
+                    <div class="gender-inequality-item map" >                      
+                      <div class="mapbody">                      
+                      </div>
+                      <div id="map"></div>
+                        </div>
+                        
+                    <div class="gender-inequality-item dropdown">
+
+                        <div class="phase-view">
+                          
+                            <div class="stage">
+                              <div class="stage-inner">
+                                 <div class="stage-name">
+                                   <span id="stage"></span>
+                                 </div>
+                                 <div class="stage-subinfo">
+                                   <div>
+                                      <div><span class="stage-label">Average Women Per Children</span></div>
+                                     <div><span id="womenperchildren"></span></div>
+                                     
+                                   </div>
+                                   <div>
+                                      <div><span class="stage-label">Average Age First Marriage</span></div>
+                                     <div><span id="firstMarriage"></span></div>
+                                     
+                                   </div>
+                                   <div>
+                                      <div><span class="stage-label">Average Male Count</span></div>
+                                     <div><span id="male_count"></span></div>
+                                     
+                                   </div>
+                                   <div>
+                                      <div><span class="stage-label">Average Female Count</span></div>
+                                     <div><span id="female_count"></span></div>
+                                     
+                                   </div>
+                                 </div>
+                              </div>
+                            </div>
+                          </div>
+                       </div>
+                    
+                    <div class="gender-inequality-item continent ">
+                        <div class="average-view">
+                            <div class="phase">
+                              <div>
+                                <span id="average"></span>
+                              </div>
+                              <div>
+                                  <span id="phase"></span>
+                              </div>
+                            </div>
+                            <div class="phase-view-margin"></div>
+                            <div class="phase-bar"></div>
+                            <div class="stage">
+                              <div class="stage-inner">
+                                 <div class="average-name">
+                                   <span class="average">Gender Ratio of Average Education</span>
+                                 </div>
+                                 <div class="stage-subinfo">
+                                    <div>
+                                        <div><span class="stage-label">(women % men) </span></div>
+                                     
+                                       
+                                     </div>
+                                 </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <!-- <div class="gender-inequality-item brushing">brushing</div> -->
+                    <div class="gender-inequality-item linechart"> 
+                      
+                    <div id="chart">                         
+                      </div>
+                    </div>
+                      <div class="gender-inequality-item lable1">Average Employment Rate</div>
+                    <div class="gender-inequality-item sunbrust">
+                        <div id="linechart"></div>
+                        
+                    </div> 
+                    <div class="gender-inequality-item lable2">Average No Education Recieved</div> 
+            </div>               
+</div>                 
+<script>
+
+</script>
+</body>
+</html>
+<script type="text/javascript" src="noEducation.js"></script> 
+<script type="text/javascript" src="employementRate.js"></script>
+<script src="maps.js"></script>
+<!-- <script src="test.js"></script>
+  -->
+
+
+
+
