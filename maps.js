@@ -57,7 +57,7 @@ var tooltip = d3.select("#map")
  .attr("class", "tooltip hidden");
 
 //load and display the world 
-d3.json("http://enjalot.github.io/wwsd/data/world/world-110m.geojson",function(error,world){
+d3.json("https://enjalot.github.io/wwsd/data/world/world-110m.geojson",function(error,world){
   if(error) return console.error(error);
   g.append("g")
     .attr("class","area")
